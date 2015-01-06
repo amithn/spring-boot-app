@@ -1,9 +1,12 @@
 package com.interactions.commands;
 
 
+import com.amithmit.handler.CreateAggregateNewHandler;
+import com.amithmit.handler.CreateAggregateProcessingHandler;
 import com.amithmit.handler.IndustryWebisteReportNewHandler;
 import com.amithmit.handler.RankingReportNewHandler;
 import com.amithmit.handler.RankingReportProcessingHandler;
+import com.amithmit.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -49,17 +52,17 @@ public class SymphonyFSM {
         Map<Event, Handler> newStateEventHandler = new HashMap<>();
         newStateEventHandler.put(Event.EV_RANKING_REPORT, rankingReportNewHandler);
         newStateEventHandler.put(Event.EV_INDUSTRY_WEBSITE_REPORT, industryWebisteReportNewHandler);
-        newStateEventHandler.put(Event.EV_CREATED_AGGREGATE, createAggregateNewHandler);
+        newStateEventHandler.put(Event.EV_CREATE_AGGREGATE, createAggregateNewHandler);
 
         Map<Event, Handler> processingStateEventHandler = new HashMap<>();
         processingStateEventHandler.put(Event.EV_RANKING_REPORT, rankingReportProcessingHandler);
         processingStateEventHandler.put(Event.EV_INDUSTRY_WEBSITE_REPORT, rankingReportProcessingHandler);
-        processingStateEventHandler.put(Event.EV_CREATED_AGGREGATE, createAggregateProcessingHandler);
+        processingStateEventHandler.put(Event.EV_CREATE_AGGREGATE, createAggregateProcessingHandler);
 
         Map<Event, Handler> doneStateEventHandlers = new HashMap<>();
         doneStateEventHandlers.put(Event.EV_RANKING_REPORT, doneStateHandler);
         doneStateEventHandlers.put(Event.EV_INDUSTRY_WEBSITE_REPORT, doneStateHandler);
-        doneStateEventHandlers.put(Event.EV_CREATED_AGGREGATE, doneStateHandler);
+        doneStateEventHandlers.put(Event.EV_CREATE_AGGREGATE, doneStateHandler);
 
         eventHandler.put(State.ST_NEW, newStateEventHandler);
         eventHandler.put(State.ST_PROCESSING, processingStateEventHandler);

@@ -3,9 +3,9 @@ package com.interactions.commands;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RankingReportRequest implements SymphonyRequest {
+public class RankingReportRequest implements APIRequest {
     private List<ReportType> reports = new ArrayList<>();
-    private SymphonyRequest request;
+    private APIRequest request;
 
     public RankingReportRequest() {
     }
@@ -18,11 +18,11 @@ public class RankingReportRequest implements SymphonyRequest {
         this.reports.add(reportType);
     }
 
-    public SymphonyRequest getRequest() {
+    public APIRequest getRequest() {
         return request;
     }
 
-    public void setRequest(SymphonyRequest request) {
+    public void setRequest(APIRequest request) {
         this.request = request;
     }
 }

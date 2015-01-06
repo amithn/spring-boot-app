@@ -1,6 +1,6 @@
 package com.interactions.commands;
 
 public enum ReportType {
-    INDUSTRT_WEBSITE,
+    INDUSTRY_WEBSITES,
     SEARCH_TERMS
 }

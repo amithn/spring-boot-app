@@ -3,11 +3,12 @@ package com.amithmit.app.config;
 import com.amithmit.handler.IndustryWebisteReportNewHandler;
 import com.amithmit.handler.RankingReportNewHandler;
 import com.amithmit.handler.RankingReportProcessingHandler;
-import com.interactions.commands.CreateAggregateNewHandler;
-import com.interactions.commands.CreateAggregateProcessingHandler;
+import com.amithmit.handler.CreateAggregateNewHandler;
+import com.amithmit.handler.CreateAggregateProcessingHandler;
+import com.amithmit.service.BackendAPIClient;
 import com.interactions.commands.DoneStateHandler;
 import com.interactions.commands.StateDetector;
-import com.interactions.commands.TaskService;
+import com.amithmit.service.TaskService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -34,13 +35,13 @@ public class HandlerConfig {
     }
 
     @Bean
-    public CreateAggregateNewHandler createAggregateNewHandler(TaskService service) {
-        return new CreateAggregateNewHandler(service);
+    public CreateAggregateNewHandler createAggregateNewHandler(BackendAPIClient client, TaskService service) {
+        return new CreateAggregateNewHandler(service, client);
     }
 
     @Bean
-    public CreateAggregateProcessingHandler createAggregateProcessingHandler(TaskService service) {
-        return new CreateAggregateProcessingHandler(service);
+    public CreateAggregateProcessingHandler createAggregateProcessingHandler(BackendAPIClient client) {
+        return new CreateAggregateProcessingHandler(client);
     }
 
     @Bean

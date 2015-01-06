@@ -4,7 +4,7 @@ import com.interactions.commands.Handler;
 import com.interactions.commands.State;
 import com.interactions.commands.StateDetector;
 import com.interactions.commands.Task;
-import com.interactions.commands.TaskService;
+import com.amithmit.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

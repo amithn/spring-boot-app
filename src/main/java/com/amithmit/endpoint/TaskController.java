@@ -10,7 +10,7 @@ import com.interactions.commands.State;
 import com.interactions.commands.Task;
 import com.interactions.commands.TaskBuilder;
 import com.interactions.commands.TaskIdGenerator;
-import com.interactions.commands.TaskService;
+import com.amithmit.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,7 +38,7 @@ public class TaskController {
 
         RankingReportRequest request = new RankingReportRequestBuilder()
                                                 .newRankingReportRequest()
-                                                .addReportType(ReportType.INDUSTRT_WEBSITE)
+                                                .addReportType(ReportType.INDUSTRY_WEBSITES)
                                                 .withRequest(industryWebsiteRequest)
                                                 .build();
 

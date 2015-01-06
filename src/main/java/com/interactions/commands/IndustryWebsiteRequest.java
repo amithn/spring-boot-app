@@ -14,12 +14,13 @@ package com.interactions.commands;
     "type": "INDUSTRY_WEBSITES"
 }
  */
-public class IndustryWebsiteRequest implements SymphonyRequest  {
+public class IndustryWebsiteRequest implements APIRequest {
     private String targetExpression;
     private int subject;
     private String region;
     private String dateFrom;
     private String dateTo;
+    private ReportType type;
 
     public String getTargetExpression() {
         return targetExpression;
@@ -59,5 +60,13 @@ public class IndustryWebsiteRequest implements SymphonyRequest  {
 
     public void setDateTo(String dateTo) {
         this.dateTo = dateTo;
+    }
+
+    public ReportType getType() {
+        return type;
+    }
+
+    public void setType(ReportType type) {
+        this.type = type;
     }
 }

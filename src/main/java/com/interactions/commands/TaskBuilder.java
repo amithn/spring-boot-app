@@ -4,37 +4,43 @@ package com.interactions.commands;
  * Created by voicestreams on 1/5/15.
  */
 public class TaskBuilder {
-    private Task Task = new Task();
+    private Task task = new Task();
 
     public TaskBuilder() {
     }
 
     public TaskBuilder withId(int id) {
-        Task.setId(id);
+        task.setId(id);
         return this;
     }
 
     public TaskBuilder withState(State state) {
-        Task.setState(state);
+        task.setState(state);
         return this;
     }
 
     public TaskBuilder withType(Event type) {
-        Task.setType(type);
+        task.setType(type);
         return this;
     }
 
     public TaskBuilder withParent(int id) {
-        Task.setParentId(id);
+        task.setParentId(id);
         return this;
     }
 
-    public TaskBuilder withRequest(SymphonyRequest request) {
-        Task.setRequest(request);
+    public TaskBuilder withRequest(APIRequest request) {
+        task.setRequest(request);
         return this;
     }
+
+    public TaskBuilder withResourceId(String id) {
+        task.setResourceId(id);
+        return this;
+    }
+
 
     public Task build() {
-        return Task;
+        return task;
     }
 }

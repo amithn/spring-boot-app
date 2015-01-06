@@ -3,18 +3,18 @@ package com.amithmit.app.config;
 import com.amithmit.handler.IndustryWebisteReportNewHandler;
 import com.amithmit.handler.RankingReportNewHandler;
 import com.amithmit.handler.RankingReportProcessingHandler;
-import com.interactions.commands.CreateAggregateNewHandler;
-import com.interactions.commands.CreateAggregateProcessingHandler;
+import com.amithmit.handler.CreateAggregateNewHandler;
+import com.amithmit.handler.CreateAggregateProcessingHandler;
 import com.interactions.commands.DoneStateHandler;
 import com.interactions.commands.StateDetector;
 import com.interactions.commands.SymphonyFSM;
-import com.interactions.commands.TaskService;
+import com.amithmit.service.TaskService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"com.interactions.commands"})
+@ComponentScan(basePackages = {"com.interactions.commands", "com.amithmit.*"})
 public class AppConfig {
 
     @Bean

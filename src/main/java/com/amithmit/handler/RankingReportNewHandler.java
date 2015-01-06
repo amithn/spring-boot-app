@@ -8,13 +8,10 @@ import com.interactions.commands.State;
 import com.interactions.commands.Task;
 import com.interactions.commands.TaskBuilder;
 import com.interactions.commands.TaskIdGenerator;
-import com.interactions.commands.TaskService;
+import com.amithmit.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by voicestreams on 1/5/15.
- */
 @Component
 public class RankingReportNewHandler implements Handler {
 
@@ -42,7 +39,7 @@ public class RankingReportNewHandler implements Handler {
     }
 
     private Event getTaskType(ReportType reportType) {
-        if(reportType == ReportType.INDUSTRT_WEBSITE) {
+        if(reportType == ReportType.INDUSTRY_WEBSITES) {
             return Event.EV_INDUSTRY_WEBSITE_REPORT;
         } else {
             return Event.EV_SEARCH_TERMS_REPORT;

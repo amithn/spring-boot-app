@@ -29,6 +29,11 @@ public class IndustryWebsiteRequestBuilder {
         return this;
     }
 
+    public IndustryWebsiteRequestBuilder withType(ReportType type) {
+        industryWebsiteRequest.setType(type);
+        return this;
+    }
+
     public IndustryWebsiteRequest build() {
         return industryWebsiteRequest;
     }

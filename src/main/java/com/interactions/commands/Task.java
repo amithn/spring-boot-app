@@ -7,8 +7,9 @@ public class Task {
     private int id;
     private Event type;
     private State state;
-    private SymphonyRequest request;
+    private APIRequest request;
     private int parentId;
+    private String resourceId;
 
     public int getId() {
         return id;
@@ -34,11 +35,11 @@ public class Task {
         this.state = state;
     }
 
-    public SymphonyRequest getRequest() {
+    public APIRequest getRequest() {
         return request;
     }
 
-    public void setRequest(SymphonyRequest request) {
+    public void setRequest(APIRequest request) {
         this.request = request;
     }
 
@@ -48,6 +49,14 @@ public class Task {
 
     public void setParentId(int parentId) {
         this.parentId = parentId;
+    }
+
+    public String getResourceId() {
+        return resourceId;
+    }
+
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 }
 

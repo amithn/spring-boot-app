@@ -8,5 +8,5 @@ public enum State {
     ST_PROCESSING,
     ST_FAILED,
     ST_DONE,
-    ST_NOT_READY
+    state, ST_NOT_READY
 }

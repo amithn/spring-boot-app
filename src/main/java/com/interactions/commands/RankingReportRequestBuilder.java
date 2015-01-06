@@ -9,11 +9,11 @@ public class RankingReportRequestBuilder {
     }
 
     public RankingReportRequestBuilder addReportType(ReportType reportType) {
-        rankingReportRequest.addReportType(ReportType.INDUSTRT_WEBSITE);
+        rankingReportRequest.addReportType(ReportType.INDUSTRY_WEBSITES);
         return this;
     }
 
-    public RankingReportRequestBuilder withRequest(SymphonyRequest request) {
+    public RankingReportRequestBuilder withRequest(APIRequest request) {
         rankingReportRequest.setRequest(request);
         return this;
     }
