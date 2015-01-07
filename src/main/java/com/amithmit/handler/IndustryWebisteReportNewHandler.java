@@ -14,9 +14,6 @@ import com.amithmit.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by voicestreams on 1/5/15.
- */
 @Component
 public class IndustryWebisteReportNewHandler implements Handler {
 

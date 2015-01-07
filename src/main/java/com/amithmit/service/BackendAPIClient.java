@@ -1,8 +1,6 @@
 package com.amithmit.service;
 
 import com.interactions.commands.APIRequest;
-import com.interactions.commands.FetchTopXRequest;
-import com.interactions.commands.Status;
 import com.interactions.commands.StatusResponse;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
