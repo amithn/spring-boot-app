@@ -53,19 +53,18 @@ public class SymphonyFSM {
         newStateEventHandler.put(Event.EV_RANKING_REPORT, rankingReportNewHandler);
         newStateEventHandler.put(Event.EV_INDUSTRY_WEBSITE_REPORT, industryWebisteReportNewHandler);
         newStateEventHandler.put(Event.EV_CREATE_AGGREGATE, createAggregateNewHandler);
+        eventHandler.put(State.ST_NEW, newStateEventHandler);
 
         Map<Event, Handler> processingStateEventHandler = new HashMap<>();
         processingStateEventHandler.put(Event.EV_RANKING_REPORT, rankingReportProcessingHandler);
         processingStateEventHandler.put(Event.EV_INDUSTRY_WEBSITE_REPORT, rankingReportProcessingHandler);
         processingStateEventHandler.put(Event.EV_CREATE_AGGREGATE, createAggregateProcessingHandler);
+        eventHandler.put(State.ST_PROCESSING, processingStateEventHandler);
 
         Map<Event, Handler> doneStateEventHandlers = new HashMap<>();
         doneStateEventHandlers.put(Event.EV_RANKING_REPORT, doneStateHandler);
         doneStateEventHandlers.put(Event.EV_INDUSTRY_WEBSITE_REPORT, doneStateHandler);
         doneStateEventHandlers.put(Event.EV_CREATE_AGGREGATE, doneStateHandler);
-
-        eventHandler.put(State.ST_NEW, newStateEventHandler);
-        eventHandler.put(State.ST_PROCESSING, processingStateEventHandler);
         eventHandler.put(State.ST_DONE, doneStateEventHandlers);
     }
 

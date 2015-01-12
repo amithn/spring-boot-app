@@ -28,6 +28,6 @@ public class CreateAggregateProcessingHandler implements Handler {
         if(Status.DONE == response.getStatus()) {
             state = State.ST_DONE;
         }
-        return state;
+      return state;
     }
 }
